@@ -10,6 +10,7 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var imageURL: URL?
     var image: UIImage?{
@@ -19,26 +20,30 @@ class SecondViewController: UIViewController {
         set{
             imageView.image = newValue
             imageView.sizeToFit()
-        }
-    }
-    
-    func fetchImage(){
-        imageURL = URL(string: "https://ru.wikipedia.org/wiki/Apple#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Aerial_view_of_Apple_Park_dllu.jpg")
-        if let url = imageURL{
-            do {
-                let imageData = try Data(contentsOf: url)
-                self.image = UIImage(data: imageData)
-                print("daflasjdfjdas")
-            } catch {
-                print(error.localizedDescription)
-            }
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        fetchImage()
+        
+        imageURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Aerial_view_of_Apple_Park_dllu.jpg/1920px-Aerial_view_of_Apple_Park_dllu.jpg")
+        let myQueue = DispatchQueue.global(qos: .utility)
+        
+        self.activityIndicator.startAnimating()
+        
+        myQueue.async { [unowned self] in
+            print("pososi1")
+            if let imageData = try? Data(contentsOf: imageURL!){
+                print("pososi2")
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: imageData)
+                    self.imageView.image = self.image
+                    print("pososi3")
+                }
+            }
+        }
     }
     
 

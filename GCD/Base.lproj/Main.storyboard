@@ -51,20 +51,26 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="226"/>
                                 <color key="backgroundColor" red="0.29933578280000001" green="1" blue="0.44926914480000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="226" id="1PS-u0-YO2"/>
+                                    <constraint firstAttribute="width" constant="414" id="1gj-rA-sHu"/>
                                     <constraint firstAttribute="height" constant="226" id="fyX-fs-iIU"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mnk-uL-ShC">
+                                <rect key="frame" x="197" y="354" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RLt-rZ-EPT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SRq-lN-qVx" firstAttribute="leading" secondItem="RLt-rZ-EPT" secondAttribute="leading" id="ebA-dd-d8X"/>
-                            <constraint firstItem="SRq-lN-qVx" firstAttribute="trailing" secondItem="RLt-rZ-EPT" secondAttribute="trailing" id="fPX-Aa-AB5"/>
-                            <constraint firstItem="SRq-lN-qVx" firstAttribute="top" secondItem="RLt-rZ-EPT" secondAttribute="top" id="zE9-nX-P7X"/>
+                            <constraint firstItem="SRq-lN-qVx" firstAttribute="centerX" secondItem="ChY-zC-RzN" secondAttribute="centerX" id="4Ai-8U-acd"/>
+                            <constraint firstItem="SRq-lN-qVx" firstAttribute="top" secondItem="RLt-rZ-EPT" secondAttribute="top" id="pjV-ll-Oi1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fUb-Rv-60l"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="mnk-uL-ShC" id="Zp6-Ep-r9s"/>
                         <outlet property="imageView" destination="SRq-lN-qVx" id="mdE-tU-dhh"/>
                     </connections>
                 </viewController>
