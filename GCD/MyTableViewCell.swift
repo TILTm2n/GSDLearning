@@ -12,6 +12,17 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myLabel: UILabel!
     
+    func configure(with text: String){
+        
+        DispatchQueue.global().async {
+            for i in 0 ..< 300_000{
+                print(i)
+            }
+        }
+        
+        myImageView.image = UIImage(named: "mersedes")
+        myLabel.text = text
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
