@@ -15,8 +15,10 @@ class MyTableViewCell: UITableViewCell {
     func configure(with text: String){
         
         DispatchQueue.global().async {
-            for i in 0 ..< 300_000{
-                print(i)
+            DispatchQueue.global().sync {
+                for i in 0 ..< 300_000{
+                    print(i)
+                }
             }
         }
         
