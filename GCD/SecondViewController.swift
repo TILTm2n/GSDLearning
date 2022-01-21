@@ -24,7 +24,10 @@ class SecondViewController: UIViewController {
             self.activityIndicator.isHidden = true
         }
     }
-    
+    var newThread = Thread(block: {
+        print("test")
+    })
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
