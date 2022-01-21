@@ -9,9 +9,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    @IBOutlet weak var myTableView: UITableViewCell!
-    @IBOutlet weak var myLabel: UILabel!
-    
+    @IBOutlet weak var myTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,4 +17,16 @@ class FirstViewController: UIViewController {
         
     }
 
+}
+
+extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }

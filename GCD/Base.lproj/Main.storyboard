@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="qSW-q8-Qw7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="qSW-q8-Qw7" customClass="MyTableViewCell" customModule="GCD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qSW-q8-Qw7" id="ojY-YF-Jt6">
@@ -53,6 +53,10 @@
                                                 <constraint firstItem="Lyo-X7-Rrr" firstAttribute="leading" secondItem="ojY-YF-Jt6" secondAttribute="leading" constant="20" id="lme-tn-tqa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myImageView" destination="Lyo-X7-Rrr" id="ebd-Cz-Hy8"/>
+                                            <outlet property="myLabel" destination="brT-wd-ojv" id="uEw-q2-lsF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -67,8 +71,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myLabel" destination="brT-wd-ojv" id="CJx-0f-eNS"/>
-                        <outlet property="myTableView" destination="qSW-q8-Qw7" id="4bi-Aq-BWP"/>
+                        <outlet property="myTableView" destination="Qay-TB-9wk" id="P2o-1d-GrO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZO-LB-HnY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
