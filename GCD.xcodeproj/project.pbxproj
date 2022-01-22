@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A339B25B279B407F001CFA59 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A339B25A279B407F001CFA59 /* FirstViewController.swift */; };
 		A339B25D279B4488001CFA59 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A339B25C279B4488001CFA59 /* MyTableViewCell.swift */; };
+		A339B25F279B52DF001CFA59 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A339B25E279B52DF001CFA59 /* DataManager.swift */; };
 		A3BF979A279885F900AC1BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF9799279885F900AC1BF7 /* AppDelegate.swift */; };
 		A3BF979C279885F900AC1BF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF979B279885F900AC1BF7 /* SceneDelegate.swift */; };
 		A3BF979E279885F900AC1BF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF979D279885F900AC1BF7 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		A339B25A279B407F001CFA59 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		A339B25C279B4488001CFA59 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		A339B25E279B52DF001CFA59 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A3BF9796279885F900AC1BF7 /* GCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BF9799279885F900AC1BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BF979B279885F900AC1BF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				A3BF97B0279886E800AC1BF7 /* SecondViewController.swift */,
 				A339B25A279B407F001CFA59 /* FirstViewController.swift */,
 				A339B25C279B4488001CFA59 /* MyTableViewCell.swift */,
+				A339B25E279B52DF001CFA59 /* DataManager.swift */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A339B25D279B4488001CFA59 /* MyTableViewCell.swift in Sources */,
+				A339B25F279B52DF001CFA59 /* DataManager.swift in Sources */,
 				A3BF979E279885F900AC1BF7 /* ViewController.swift in Sources */,
 				A3BF979A279885F900AC1BF7 /* AppDelegate.swift in Sources */,
 				A3BF97A4279885F900AC1BF7 /* GCD.xcdatamodeld in Sources */,

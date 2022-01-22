@@ -14,13 +14,13 @@ class MyTableViewCell: UITableViewCell {
     
     func configure(with text: String){
         
-        DispatchQueue.global().async {
-            DispatchQueue.global().sync {
-                for i in 0 ..< 300_000{
-                    print(i)
-                }
-            }
-        }
+//        DispatchQueue.global().async {
+//            DispatchQueue.global().sync {
+//                for i in 0 ..< 300_000{
+//                    print(i)
+//                }
+//            }
+//        }
         
         myImageView.image = UIImage(named: "mersedes")
         myLabel.text = text
