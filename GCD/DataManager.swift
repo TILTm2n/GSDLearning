@@ -64,8 +64,20 @@ class DataManager{
             }
         }
         
+        let operationBlock3 = BlockOperation{
+            for i in 0 ..< 5 {
+                //data.append("\(i) - 🐋")
+                print("White Rabbit 🐇")
+            }
+        }
+        
+        //эти зависимости означают то, что блок 3 выполнится после того как будут выполнены блок1 и блок2
+        operationBlock3.addDependency(operationBlock1)
+        operationBlock3.addDependency(operationBlock2)
+        
         operationQueue.addOperation(operationBlock1)
         operationQueue.addOperation(operationBlock2)
+        operationQueue.addOperation(operationBlock3)
         
         completion(data)
         
