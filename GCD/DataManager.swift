@@ -62,7 +62,7 @@ class DataManager{
                     //print("🐋")
                 }
             }
-            
+//
             let operationBlock3 = BlockOperation{
                 for i in 0 ..< 5 {
                     data.append("\(i) - 🐇")
@@ -71,11 +71,11 @@ class DataManager{
             }
             
             //эти зависимости означают то, что блок 3 выполнится после того как будут выполнены блок1 и блок2
-            operationBlock3.addDependency(operationBlock1)
-            operationBlock3.addDependency(operationBlock2)
+//            operationBlock3.addDependency(operationBlock1)
+//            operationBlock3.addDependency(operationBlock2)
             
             //ждет пока опреции завершатся
-            operationQueue.addOperations([operationBlock1, operationBlock2, operationBlock3], waitUntilFinished: true)
+            operationQueue.addOperations([operationBlock1, operationBlock3], waitUntilFinished: true)
             
             completion(data)
         }

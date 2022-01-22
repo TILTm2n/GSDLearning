@@ -14,6 +14,11 @@ class FirstViewController: UIViewController {
     var dataSource: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DispatchQueue.main.sync {
+            print("deadlock")
+        }
+        
         //myTableView.estimatedRowHeight = 100
         DataManager.obtainDataOperation { [weak self] (stringsArray) in
             self?.dataSource = stringsArray
