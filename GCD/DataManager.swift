@@ -40,4 +40,27 @@ class DataManager{
         }
         
     }
+    
+    class func obtainDataOperation(completion: @escaping (([String]) -> Void)){
+        
+        var data = [String]()
+        
+        let operationBlock1 = BlockOperation{
+            for i in 0 ..< 5 {
+                data.append("\(i) - 😇🤩")
+            }
+        }
+        
+        let operationBlock2 = BlockOperation{
+            for i in 0 ..< 5 {
+                data.append("\(i) - 😇")
+            }
+        }
+        
+        operationBlock1.start()
+        operationBlock2.start()
+        
+        completion(data)
+        
+    }
 }

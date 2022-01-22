@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //myTableView.estimatedRowHeight = 100
-        DataManager.obtainData { [weak self] (stringsArray) in
+        DataManager.obtainDataOperation { [weak self] (stringsArray) in
             self?.dataSource = stringsArray
             
             DispatchQueue.main.async {
