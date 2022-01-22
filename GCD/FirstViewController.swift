@@ -15,10 +15,15 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //myTableView.estimatedRowHeight = 100
-        DataManager.obtainData { (stringsArray) in
-            self.dataSource = stringsArray
-            self.myTableView.reloadData()
+        DataManager.obtainData { [weak self] (stringsArray) in
+            self?.dataSource = stringsArray
+            
+            DispatchQueue.main.async {
+                self?.myTableView.reloadData()
+            }
+            print("1")
         }
+        print("2")
         
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
