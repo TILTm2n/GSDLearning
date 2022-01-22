@@ -45,20 +45,27 @@ class DataManager{
         
         var data = [String]()
         
+        //OperationQueue отличается от DispatchQueue тем что создает параллельные очереди
+        let operationQueue = OperationQueue()
+        //определяем максимальное количтсво операций в одно и тоже время
+        operationQueue.maxConcurrentOperationCount = 1
+        
         let operationBlock1 = BlockOperation{
             for i in 0 ..< 5 {
-                data.append("\(i) - 😇🤩")
+                //data.append("\(i) - 🦊")
+                print("🦊")
             }
         }
         
         let operationBlock2 = BlockOperation{
             for i in 0 ..< 5 {
-                data.append("\(i) - 😇")
+                //data.append("\(i) - 🐋")
+                print("🐋")
             }
         }
         
-        operationBlock1.start()
-        operationBlock2.start()
+        operationQueue.addOperation(operationBlock1)
+        operationQueue.addOperation(operationBlock2)
         
         completion(data)
         
